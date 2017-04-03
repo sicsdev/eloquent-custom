@@ -1,0 +1,4 @@
+1.0.0
+-----
+
+- Initial version: Entity inheritor for Eloquent Model. Allows to set default values.
