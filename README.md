@@ -1,4 +1,4 @@
-# PHP Blade Directives
+# Eloquent Extensions and Helpers
 
 Custom Extensions for Eloquent
 
