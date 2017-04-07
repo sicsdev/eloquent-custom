@@ -1,5 +1,5 @@
 {
-    "name": "saritasa/php-eloquent-custom",
+    "name": "saritasa/eloquent-custom",
     "type": "library",
     "description": "Saritasa customizations for Eloquent",
     "keywords": ["laravel", "eloquent"],

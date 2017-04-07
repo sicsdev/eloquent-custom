@@ -2,15 +2,15 @@
 
 Custom Extensions for Eloquent
 
-See https://laravel.com/docs/5.4/eloquent
+See https://laravel.com/docs/eloquent
 
 
 ## Laravel 5.x
 
-Install the ``saritasa/php-eloquent-custom`` package:
+Install the ```saritasa/eloquent-custom``` package:
 
 ```bash
-$ composer require saritasa/php-eloquent-custom
+$ composer require saritasa/eloquent-custom
 ```
 
 ## Available classes

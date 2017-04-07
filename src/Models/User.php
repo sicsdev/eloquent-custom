@@ -5,6 +5,7 @@ namespace Saritasa\Database\Eloquent\Models;
 use Carbon\Carbon;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -188,5 +189,16 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
                 . '|max:' . config('app.model.user.password.max', 20);
         }
         return $rules;
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
     }
 }
