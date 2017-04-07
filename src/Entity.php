@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entity extends Model
 {
+    const ID = 'id';
+    const DELETED_AT = 'deleted_at';
+
     protected $defaults = [];
 
     public function __construct(array $attributes = [])
