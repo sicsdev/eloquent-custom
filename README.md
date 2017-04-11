@@ -13,6 +13,22 @@ Install the ```saritasa/eloquent-custom``` package:
 $ composer require saritasa/eloquent-custom
 ```
 
+**Optionally** (if you want to use default migrations):
+Add the BladeDirectivesServiceProvider service provider ``config/app.php``:
+
+```php
+'providers' => array(
+    // ...
+    Saritasa\Laravel\BladeDirectivesServiceProvider::class,
+)
+```
+
+then you can execute command:
+
+```bash
+php artisan vendor:publish --provider=Saritasa\Database\Eloquent\PredefinedMigrationsServiceProvider --tag=migrations
+```
+
 ## Available classes
 
 ### Entity
