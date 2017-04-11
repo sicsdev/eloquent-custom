@@ -8,6 +8,7 @@ class Entity extends Model
 {
     const ID = 'id';
     const DELETED_AT = 'deleted_at';
+    const RULE_REQUIRED = 'required';
 
     protected $defaults = [];
 
