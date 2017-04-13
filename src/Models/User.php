@@ -9,7 +9,6 @@ use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Query\Builder;
 use Saritasa\Database\Eloquent\Entity;
 
 /**
@@ -27,14 +26,6 @@ use Saritasa\Database\Eloquent\Entity;
  * @property Carbon $deleted_at
  * @property string $role
  * @property-read string $full_name
- * @method static Builder|User whereId($value)
- * @method static Builder|User whereFirstName($value)
- * @method static Builder|User whereLastName($value)
- * @method static Builder|User whereEmail($value)
- * @method static Builder|User whereRole($value)
- * @method static Builder|User whereCreatedAt($value)
- * @method static Builder|User whereUpdatedAt($value)
- * @method static Builder|User whereDeletedAt($value)
  */
 class User extends Entity implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -61,7 +52,6 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
         self::CREATED_AT,
         self::UPDATED_AT,
         self::DELETED_AT,
-        'trial_ends_at'
     ];
 
     /**
@@ -115,6 +105,18 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
         self::REMEMBER_TOKEN,
         self::CREATED_AT,
         self::UPDATED_AT,
+    ];
+
+    /**
+     * The attributes that should not be visible in arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        self::PWD_FIELD,
+        self::REMEMBER_TOKEN,
+        self::UPDATED_AT,
+        self::DELETED_AT,
     ];
 
     /**
