@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Saritasa\Database\Eloquent\Models;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
