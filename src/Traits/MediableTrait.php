@@ -4,7 +4,7 @@
 namespace App\Extensions;
 
 
-use App\Models\Media;
+use Saritasa\Database\Eloquent\Models\Media;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait MediableTrait
