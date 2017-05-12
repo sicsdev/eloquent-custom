@@ -39,9 +39,6 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
     const ROLE = 'role';
     const PWD_FIELD = 'password';
 
-    const ROLE_ADMIN = 'admin';
-    const ROLE_USER = 'user';
-    const ROLES = [self::ROLE_ADMIN, self::ROLE_USER];
     const REMEMBER_TOKEN = 'remember_token';
 
     /**
