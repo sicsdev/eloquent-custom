@@ -1,7 +1,7 @@
 1.0.3
 -----
 Update User model to use saritasa/roles-simple
-Publish migrations on
+Publish migrations in console only
 
 1.0.2
 Fix namespace, remove unneeded migrations
