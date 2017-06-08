@@ -1,6 +1,14 @@
-1.0.1
+1.0.3
 -----
 Update User model to use saritasa/roles-simple
+Publish migrations on
+
+1.0.2
+Fix namespace, remove unneeded migrations
+
+1.0.1
+-----
+Fixes
 
 1.0.0
 -----

@@ -20,7 +20,17 @@ class PredefinedMigrationsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // default migrations files
+        if ($this->app->runningInConsole())        {
+            return;
+        }
+        $this->publishMigrations();
+    }
+
+    /**
+     * Publish default migrations files
+     */
+    public function publishMigrations(): void
+    {
         $this->publishes([
             __DIR__ . '/../database/migrations/' => database_path('migrations'),
         ], 'migrations');
