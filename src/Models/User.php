@@ -6,8 +6,8 @@ use Carbon\Carbon;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Auth\Notifications\ResetPassword;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Contracts\Auth\Authenticatable as IAuthenticatable;
+use Illuminate\Contracts\Auth\CanResetPassword as ICanResetPassword;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Saritasa\Database\Eloquent\Entity;
@@ -25,10 +25,10 @@ use Saritasa\Database\Eloquent\Entity;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon $deleted_at
- * @property string $role
+ * @property int $role_id
  * @property-read string $full_name
  */
-class User extends Entity implements AuthenticatableContract, CanResetPasswordContract
+class User extends Entity implements IAuthenticatable, ICanResetPassword
 {
     use Authenticatable, CanResetPassword, SoftDeletes, Notifiable;
 
@@ -36,8 +36,9 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
     const FIRST_NAME = 'first_name';
     const LAST_NAME = 'last_name';
     const FULL_NAME = 'full_name';
-    const ROLE = 'role';
+    const ROLE_ID = 'role_id';
     const PWD_FIELD = 'password';
+    const AVATAR_URL = 'avatar_url';
 
     const REMEMBER_TOKEN = 'remember_token';
 
@@ -62,7 +63,6 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
         self::EMAIL,
         self::FIRST_NAME,
         self::LAST_NAME,
-        self::ROLE,
         self::CREATED_AT
     ];
 
@@ -90,7 +90,7 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
         self::FIRST_NAME,
         self::LAST_NAME,
         self::PWD_FIELD,
-        self::ROLE,
+        self::AVATAR_URL,
     ];
 
     /**
@@ -115,6 +115,7 @@ class User extends Entity implements AuthenticatableContract, CanResetPasswordCo
         self::REMEMBER_TOKEN,
         self::UPDATED_AT,
         self::DELETED_AT,
+        self::ROLE_ID
     ];
 
     /**
