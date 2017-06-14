@@ -1,3 +1,7 @@
+1.0.4
+-----
+Remove User->setProfileVisible method and two sets of visible fields. Should be done via Transformer
+
 1.0.3
 -----
 Update User model to use saritasa/roles-simple

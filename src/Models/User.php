@@ -67,20 +67,6 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword
     ];
 
     /**
-     * The attributes that should be visible in arrays for self profile.
-     *
-     * @var array
-     */
-    protected $profileVisible = [
-        self::ID,
-        self::EMAIL,
-        self::FIRST_NAME,
-        self::LAST_NAME,
-        self::CREATED_AT,
-        self::UPDATED_AT
-    ];
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -117,17 +103,6 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword
         self::DELETED_AT,
         self::ROLE_ID
     ];
-
-    /**
-     * Set visible attributes for self profile
-     *
-     * @return User
-     */
-    public function setProfileVisible()
-    {
-        $this->setVisible($this->profileVisible);
-        return $this;
-    }
 
     /**
      * Validate password
