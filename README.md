@@ -72,4 +72,4 @@ $this->assertEquals('admin', $admin->role); // true
 * [Bug Tracker](http://github.com/saritasa/php-eloquent-custom/issues)
 * [Code](http://github.com/saritasa/php-eloquent-custom)
 * [Changes History](CHANGES.md)
-* [Authors](http://github.com/saritasa/php--eloquent-custom/contributors)
+* [Authors](http://github.com/saritasa/php-eloquent-custom/contributors)

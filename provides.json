@@ -1,5 +1,6 @@
 {
   "providers": [
+    "Saritasa\\Database\\Eloquent\\PredefinedMigrationsServiceProvider"
   ],
   "aliases": [
     {
