@@ -14,12 +14,12 @@ $ composer require saritasa/eloquent-custom
 ```
 
 **Optionally** (if you want to use default migrations):
-Add the BladeDirectivesServiceProvider service provider ``config/app.php``:
+Add the PredefinedMigrationsServiceProvider service provider ``config/app.php``:
 
 ```php
 'providers' => array(
     // ...
-    Saritasa\Laravel\BladeDirectivesServiceProvider::class,
+    Saritasa\Database\Eloquent\PredefinedMigrationsServiceProvider::class,
 )
 ```
 
@@ -64,10 +64,12 @@ $this->assertEquals('admin', $admin->role); // true
 1. Create fork
 2. Checkout fork
 3. Develop locally as usual. **Code must follow [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-fig.org/psr/psr-2/)**
-4. Update README.md to describe new or changed functionality. Add changes description to CHANGE file.
+4. Update [README.md](README.md) to describe new or changed functionality. Add changes description to [CHANGES.md](CHANGES.md) file.
 5. When ready, create pull request
 
 ## Resources
 
 * [Bug Tracker](http://github.com/saritasa/php-eloquent-custom/issues)
 * [Code](http://github.com/saritasa/php-eloquent-custom)
+* [Changes History](CHANGES.md)
+* [Authors](http://github.com/saritasa/php--eloquent-custom/contributors)
