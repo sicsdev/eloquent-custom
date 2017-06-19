@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.5
+-----
+Class Saritasa\Database\Eloquent\Utils\Query with helper functions to work with Eloquent queries
+
 1.0.4
 -----
 Remove User->setProfileVisible method and two sets of visible fields. Should be done via Transformer
