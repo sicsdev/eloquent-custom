@@ -26,8 +26,8 @@ class Query
         foreach ($bindings as $val) {
             if (is_string($val)) {
                 $val = "'$val'";
-                $query = str_replace_first('?', $val, $query);
             }
+            $query = str_replace_first('?', $val, $query);
         }
         return $query;
     }
