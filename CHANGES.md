@@ -1,5 +1,10 @@
 # Changes History
 
+1.0.6
+-----
+User model utilizes Authorizable trait
+Add base job class, queueable by default
+
 1.0.5
 -----
 Class Saritasa\Database\Eloquent\Utils\Query with helper functions to work with Eloquent queries

@@ -9,6 +9,7 @@ use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as IAuthenticatable;
 use Illuminate\Contracts\Auth\CanResetPassword as ICanResetPassword;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
 use Saritasa\Database\Eloquent\Entity;
 
@@ -30,7 +31,7 @@ use Saritasa\Database\Eloquent\Entity;
  */
 class User extends Entity implements IAuthenticatable, ICanResetPassword
 {
-    use Authenticatable, CanResetPassword, SoftDeletes, Notifiable;
+    use Authenticatable, CanResetPassword, SoftDeletes, Notifiable, Authorizable;
 
     const EMAIL = 'email';
     const FIRST_NAME = 'first_name';
