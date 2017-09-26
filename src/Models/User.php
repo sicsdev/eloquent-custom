@@ -7,6 +7,7 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as IAuthenticatable;
+use Illuminate\Contracts\Auth\Access\Authorizable as IAuthorizable;
 use Illuminate\Contracts\Auth\CanResetPassword as ICanResetPassword;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\Access\Authorizable;
@@ -29,7 +30,7 @@ use Saritasa\Database\Eloquent\Entity;
  * @property int $role_id
  * @property-read string $full_name
  */
-class User extends Entity implements IAuthenticatable, ICanResetPassword
+class User extends Entity implements IAuthenticatable, ICanResetPassword, IAuthorizable
 {
     use Authenticatable, CanResetPassword, SoftDeletes, Notifiable, Authorizable;
 
