@@ -1,5 +1,9 @@
 # Changes History
 
+1.0.7
+-----
+Add SortByName QueryBuilder global scope
+
 1.0.6
 -----
 User model utilizes Authorizable trait
