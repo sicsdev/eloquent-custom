@@ -10,5 +10,5 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  */
 interface IMediable
 {
-    function media(): MorphMany;
+    public function media(): MorphMany;
 }

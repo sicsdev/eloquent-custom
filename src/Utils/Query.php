@@ -22,7 +22,7 @@ class Query
         }, $logs);
     }
 
-    static function inlineBindings(string $query, array $bindings)
+    protected static function inlineBindings(string $query, array $bindings)
     {
         foreach ($bindings as $val) {
             if (is_string($val)) {
@@ -46,7 +46,7 @@ class Query
      * @param QueryBuilder|EloquentBuilder $query
      * @return string
      */
-    static function plainSql($query)
+    public static function plainSql($query)
     {
         $query = static::getBaseQuery($query);
         return self::inlineBindings($query->toSql(), $query->getBindings());
