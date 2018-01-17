@@ -33,7 +33,8 @@ class Product extends Entity
 
     protected $guarded = [];
 
-    public function getPriceDisplayAttribute() {
+    public function getPriceDisplayAttribute()
+    {
         return '$'. number_format($this->price, 2);
     }
 }

@@ -3,7 +3,6 @@
 
 namespace App\Extensions;
 
-
 use Saritasa\Database\Eloquent\Models\Media;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 

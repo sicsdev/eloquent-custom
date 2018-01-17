@@ -12,11 +12,12 @@ class Query
      * @param \Closure $closure
      * @return array
      */
-    public static function captureQueries(\Closure $closure) {
+    public static function captureQueries(\Closure $closure)
+    {
         DB::enableQueryLog();
         $closure();
         $logs = DB::getQueryLog();
-        return array_map(function($log) {
+        return array_map(function ($log) {
             return static::inlineBindings($log['query'], $log['bindings']);
         }, $logs);
     }
@@ -36,7 +37,8 @@ class Query
      * @param EloquentBuilder|QueryBuilder $query $query
      * @return QueryBuilder
      */
-    public static function getBaseQuery($query) {
+    public static function getBaseQuery($query)
+    {
         return ($query instanceof QueryBuilder) ? $query : $query->getQuery();
     }
 
