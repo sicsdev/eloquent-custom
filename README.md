@@ -61,6 +61,23 @@ $this->assertEquals('admin', $admin->role); // true
 
 ```
 
+### SortByName
+Global scope for Eloquent models to add sorting by name by default
+
+**Example**:
+
+```php
+class SomeModel extends Model {
+...
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new \Saritasa\Database\Eloquent\Scopes\SortByName());
+    }
+...
+}
+``` 
+
 ## Contributing
 
 1. Create fork
