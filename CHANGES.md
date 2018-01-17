@@ -1,9 +1,17 @@
 # Changes History
 
+1.0.8
+-----
+Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
+
+1.0.7
+-----
+Add SortByName QueryBuilder global scope
+
 1.0.6
 -----
-User model utilizes Authorizable trait
-Add base job class, queueable by default
+* User model utilizes Authorizable trait
+* Add base job class, queueable by default
 
 1.0.5
 -----
@@ -15,8 +23,8 @@ Remove User->setProfileVisible method and two sets of visible fields. Should be 
 
 1.0.3
 -----
-Update User model to use saritasa/roles-simple
-Publish migrations in console only
+* Update User model to use saritasa/roles-simple
+* Publish migrations in console only
 
 1.0.2
 -----
