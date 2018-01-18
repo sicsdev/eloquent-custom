@@ -1,5 +1,7 @@
 # Eloquent Extensions and Helpers
 
+[![Build Status](https://travis-ci.org/Saritasa/php-eloquent-custom.svg?branch=master)](https://travis-ci.org/Saritasa/php-eloquent-custom)
+
 Custom Extensions for Eloquent
 
 See https://laravel.com/docs/eloquent
