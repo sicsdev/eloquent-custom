@@ -107,9 +107,9 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     ];
 
     /**
-     * Validate password
+     * Check, if password matches saved password hash
      *
-     * @param string $password
+     * @param string $password Plain text password (unencrypted)
      *
      * @return boolean
      */
@@ -119,9 +119,9 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     }
 
     /**
-     * Encodes the user's password.
+     * Encodes the user's password (remember hash)
      *
-     * @param string $password
+     * @param string $password Plain text password (unencrypted)
      * @return string
      * @access public
      * @static
@@ -134,7 +134,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     /**
      * Sets the user's password.
      *
-     * @param string $password
+     * @param string $password Plain text password (unencrypted)
      */
     public function setPasswordAttribute($password)
     {
@@ -143,6 +143,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
 
     /**
      * Gets "last_name first_name"
+     *
      * @return string
      */
     public function getFullNameAttribute()
@@ -172,7 +173,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     /**
      * Send the password reset notification.
      *
-     * @param  string  $token
+     * @param  string  $token One-time use token to reset password
      * @return void
      */
     public function sendPasswordResetNotification($token)

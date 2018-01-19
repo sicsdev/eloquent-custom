@@ -15,11 +15,11 @@ use Illuminate\Support\Collection;
 trait SlugTrait
 {
     /**
-     * Override set name
+     * Override set name - also updates slug
      *
-     * @param $name
+     * @param string $name New name value
      */
-    public function setNameAttribute($name)
+    public function setNameAttribute(string $name)
     {
         $this->attributes['name'] = $name;
         $this->slug = $slug = str_slug($name);

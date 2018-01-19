@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 class Query
 {
     /**
-     * @param \Closure $closure
+     * Capture SQL queries, called via Eloquent inside argument closure
+     *
+     * @param \Closure $closure function, that contains DB invocations
      * @return array
      */
     public static function captureQueries(\Closure $closure)
@@ -34,7 +36,9 @@ class Query
     }
 
     /**
-     * @param EloquentBuilder|QueryBuilder $query $query
+     * If builder is EloquenBuilder, return it's internal raw QueryBuiler
+     *
+     * @param EloquentBuilder|QueryBuilder $query Query buiilder
      * @return QueryBuilder
      */
     public static function getBaseQuery($query)
@@ -43,7 +47,9 @@ class Query
     }
 
     /**
-     * @param QueryBuilder|EloquentBuilder $query
+     * Present query builder as plain SQL, including inline parameter values
+     *
+     * @param QueryBuilder|EloquentBuilder $query Query buiilder
      * @return string
      */
     public static function plainSql($query)

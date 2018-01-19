@@ -7,8 +7,8 @@ use Saritasa\Enum;
 
 /**
  * Adds some features to Eloquent model:
- * Enums cast. See TODO: Doc URL
- * Ability to define default values. See TODO: Doc URL
+ * Enums cast. See https://github.com/Saritasa/php-common#enum
+ * Ability to define default values. See https://github.com/Saritasa/php-eloquent-custom#entity
  */
 class Entity extends Model
 {
@@ -20,6 +20,7 @@ class Entity extends Model
 
     /**
      * The attributes that should be cast to Enum classes
+     *
      * @var array
      */
     protected $enums = [];
@@ -31,8 +32,10 @@ class Entity extends Model
     }
 
     /**
-     * Gets the value of attribute
-     * @param string $key
+     * Gets the value of attribute,
+     * taking enums typecast into consideration
+     *
+     * @param string $key Name of attribute
      * @return mixed
      */
     public function getAttributeValue($key)
@@ -47,9 +50,11 @@ class Entity extends Model
     }
 
     /**
-     * Sets the value of attribute
-     * @param string $key
-     * @param mixed $value
+     * Sets the value of attribute,
+     * taking enums typecast into consideration
+     *
+     * @param string $key Name of the attribute
+     * @param mixed $value Value of the attribute to set
      * @return $this
      */
     public function setAttribute($key, $value)
@@ -66,7 +71,10 @@ class Entity extends Model
 
     /**
      * Gets validation rule for given enum class
-     * @param string $enumClass
+     *
+     * @deprecated Should use Rule::enum($enumClass)
+     *
+     * @param string $enumClass Enum class name
      * @return array
      */
     protected static function getEnumValidationRule(string $enumClass) : array
