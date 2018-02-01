@@ -154,6 +154,8 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     /**
      * Return array of rules for model validation
      *
+     * @deprecated Declare rules in Form Request: https://laravel.com/docs/5.5/validation#form-request-validation
+     *
      * @return array
      */
     public function getRules()
