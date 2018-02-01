@@ -90,7 +90,6 @@ or just build and test project on your own.
 
 ## Resources
 
-* [Bug Tracker](http://github.com/saritasa/php-eloquent-custom/issues)
-* [Code](http://github.com/saritasa/php-eloquent-custom)
 * [Changes History](CHANGES.md)
+* [Bug Tracker](http://github.com/saritasa/php-eloquent-custom/issues)
 * [Authors](http://github.com/saritasa/php-eloquent-custom/contributors)
