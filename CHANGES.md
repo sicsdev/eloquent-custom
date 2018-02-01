@@ -1,13 +1,10 @@
 # Changes History
 
-1.0.9
------
-Deprecate User->getRules() method.
-Declare your rules in form request validation instead: https://laravel.com/docs/5.5/validation#form-request-validation
-
 1.0.8
 -----
-Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
+* Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
+* Deprecate User->getRules() method.
+  Declare your rules in form request validation instead: https://laravel.com/docs/5.5/validation#form-request-validation
 
 1.0.7
 -----
