@@ -1,5 +1,9 @@
 # Changes History
 
+1.1.1
+-----
+Fix namespace in MediableTrait 
+
 1.1.0
 -----
 Declare Laravel 6 compatibility

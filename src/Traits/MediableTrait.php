@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Extensions;
+namespace Saritasa\Database\Eloquent\Traits;
 
 use Saritasa\Database\Eloquent\Models\Media;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
