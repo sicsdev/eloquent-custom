@@ -1,5 +1,9 @@
 # Changes History
 
+1.1.0
+-----
+Declare Laravel 6 compatibility
+
 1.0.8
 -----
 * Enable Laravel's package discovery https://laravel.com/docs/5.5/packages#package-discovery
