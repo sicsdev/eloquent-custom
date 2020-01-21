@@ -10,7 +10,7 @@ Custom Extensions for Eloquent
 See https://laravel.com/docs/eloquent
 
 
-## Laravel 5.x
+## Laravel 5.x/6.x
 
 Install the ```saritasa/eloquent-custom``` package:
 
