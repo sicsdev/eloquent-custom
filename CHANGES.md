@@ -1,5 +1,9 @@
 # Changes History
 
+1.1.2
+-----
+User->hasVerifiedEmail() takes into consideration local constant
+
 1.1.1
 -----
 * Add Email verification to user model

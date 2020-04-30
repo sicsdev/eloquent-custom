@@ -176,14 +176,13 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     }
 
     /**
-     * Send the password reset notification.
+     * Determine if the user has verified their email address.
      *
-     * @param  string  $token One-time use token to reset password
-     * @return void
+     * @return bool
      */
-    public function sendPasswordResetNotification($token)
+    public function hasVerifiedEmail()
     {
-        $this->notify(new ResetPassword($token));
+        return ! is_null($this->getAttributeValue(static::EMAIL_VERIFIED_AT));
     }
 
     /**
