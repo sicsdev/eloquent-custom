@@ -4,11 +4,13 @@ namespace Saritasa\Database\Eloquent\Models;
 
 use Carbon\Carbon;
 use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as IAuthenticatable;
 use Illuminate\Contracts\Auth\Access\Authorizable as IAuthorizable;
 use Illuminate\Contracts\Auth\CanResetPassword as ICanResetPassword;
+use Illuminate\Contracts\Auth\MustVerifyEmail as IMustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
@@ -30,9 +32,9 @@ use Saritasa\Database\Eloquent\Entity;
  * @property int $role_id
  * @property-read string $full_name
  */
-class User extends Entity implements IAuthenticatable, ICanResetPassword, IAuthorizable
+class User extends Entity implements IAuthenticatable, ICanResetPassword, IAuthorizable, IMustVerifyEmail
 {
-    use Authenticatable, CanResetPassword, SoftDeletes, Notifiable, Authorizable;
+    use Authenticatable, CanResetPassword, SoftDeletes, Notifiable, Authorizable, MustVerifyEmail;
 
     const EMAIL = 'email';
     const FIRST_NAME = 'first_name';
@@ -40,7 +42,8 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     const FULL_NAME = 'full_name';
     const ROLE_ID = 'role_id';
     const PWD_FIELD = 'password';
-    const AVATAR_URL = 'avatar_url';
+    const AVATAR = 'avatar';
+    const EMAIL_VERIFIED_AT = 'email_verified_at';
 
     const REMEMBER_TOKEN = 'remember_token';
 
@@ -78,7 +81,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
         self::FIRST_NAME,
         self::LAST_NAME,
         self::PWD_FIELD,
-        self::AVATAR_URL,
+        self::AVATAR,
     ];
 
     /**
@@ -181,5 +184,17 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPassword($token));
+    }
+
+    /**
+     * Mark the given user's email as verified.
+     *
+     * @return bool
+     */
+    public function markEmailAsVerified()
+    {
+        return $this->forceFill([
+            static::EMAIL_VERIFIED_AT => $this->freshTimestamp(),
+        ])->save();
     }
 }
