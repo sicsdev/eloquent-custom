@@ -1,13 +1,10 @@
 # Changes History
 
-1.1.2
+1.1.1
 -----
 * Add Email verification to user model
 * Change const User::AVATAR_URL to User::AVATAR
-
-1.1.1
------
-Fix namespace in MediableTrait 
+* Fix namespace in MediableTrait 
 
 1.1.0
 -----
