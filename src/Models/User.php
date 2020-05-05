@@ -111,7 +111,9 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     ];
 
     /**
-     * {@inheritdoc}
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return integer
      */
     public function getJWTIdentifier()
     {
@@ -119,7 +121,9 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     }
 
     /**
-     * {@inheritdoc}
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
      */
     public function getJWTCustomClaims()
     {
@@ -195,7 +199,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     /**
      * Determine if the user has verified their email address.
      *
-     * @return bool
+     * @return boolean
      */
     public function hasVerifiedEmail()
     {
