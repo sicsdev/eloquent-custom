@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
 use Saritasa\Database\Eloquent\Entity;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * Class User
@@ -32,7 +33,7 @@ use Saritasa\Database\Eloquent\Entity;
  * @property int $role_id
  * @property-read string $full_name
  */
-class User extends Entity implements IAuthenticatable, ICanResetPassword, IAuthorizable, IMustVerifyEmail
+class User extends Entity implements IAuthenticatable, ICanResetPassword, IAuthorizable, IMustVerifyEmail, JWTSubject
 {
     use Authenticatable, CanResetPassword, SoftDeletes, Notifiable, Authorizable, MustVerifyEmail;
 
@@ -108,6 +109,22 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
         self::DELETED_AT,
         self::ROLE_ID
     ];
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 
     /**
      * Check, if password matches saved password hash

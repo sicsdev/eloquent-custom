@@ -1,5 +1,8 @@
 # Changes History
 
+1.1.3
+User implements JWTSubject
+
 1.1.2
 -----
 User->hasVerifiedEmail() takes into consideration local constant
