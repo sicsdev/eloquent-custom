@@ -209,7 +209,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
     /**
      * Mark the given user's email as verified.
      *
-     * @return bool
+     * @return boolean
      */
     public function markEmailAsVerified()
     {
