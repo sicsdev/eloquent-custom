@@ -1,6 +1,11 @@
 # Changes History
 
+1.1.4
+-----
+Fix User::getFullName() - trim whitespaces
+
 1.1.3
+-----
 User implements JWTSubject
 
 1.1.2
