@@ -172,7 +172,7 @@ class User extends Entity implements IAuthenticatable, ICanResetPassword, IAutho
      */
     public function getFullNameAttribute()
     {
-        return "$this->last_name $this->first_name";
+        return trim("$this->first_name $this->last_name");
     }
 
     /**
