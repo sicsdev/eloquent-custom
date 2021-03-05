@@ -1,6 +1,6 @@
 # Eloquent Extensions and Helpers
 
-[![Build Status](https://travis-ci.org/Saritasa/php-eloquent-custom.svg?branch=master)](https://travis-ci.org/Saritasa/php-eloquent-custom)
+[![PHP CodeSniffer](https://github.com/Saritasa/php-eloquent-custom/workflows/PHP%20Codesniffer/badge.svg)](https://github.com/Saritasa/php-eloquent-custom/actions)
 [![Release](https://img.shields.io/github/release/saritasa/php-eloquent-custom.svg)](https://github.com/Saritasa/php-eloquent-custom/releases)
 [![PHPv](https://img.shields.io/packagist/php-v/saritasa/eloquent-custom.svg)](http://www.php.net)
 [![Downloads](https://img.shields.io/packagist/dt/saritasa/eloquent-custom.svg)](https://packagist.org/packages/saritasa/eloquent-custom)
