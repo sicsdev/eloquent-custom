@@ -5,6 +5,13 @@ namespace Saritasa\Database\Eloquent\Schema;
 use Closure;
 use Illuminate\Database\Schema\Blueprint;
 
+/**
+ * Class CamelCaseBlueprint
+ * Change timestamps function to create camel case names
+ * "createdAt" and "updatedAt instead of "created_at" and "updated_at"
+ *
+ * @package Saritasa\Database\Eloquent\Schema
+ */
 class CamelCaseBlueprint extends Blueprint
 {
     public function __construct($table, Closure $callback = null, $prefix = '')
