@@ -5,7 +5,6 @@ namespace Saritasa\Database\Eloquent\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class CamelCaseModel
  * Make easy work with DB tables named by camel case notation.
  */
 class CamelCaseModel extends Model
