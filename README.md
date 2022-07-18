@@ -83,6 +83,47 @@ class SomeModel extends Model {
 }
 ``` 
 
+### CamelCaseModel
+
+Extended class Model for use camel case notation in DB.
+
+**Example**:
+
+```php
+use Saritasa\Database\Eloquent\CamelCaseModel;
+
+class SomeModel extends CamelCaseModel
+{
+    //your code
+}
+```
+
+### CamelCaseBlueprint
+
+Extends class Blueprint for use camel case in base migration methods
+
+**Example**:
+```php
+use Illuminate\Database\Migrations\Migration;
+use Saritasa\Database\Schema\CamelCaseBlueprint as Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateSomeTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('someTable', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('someColumnName');
+            $table->timestamps();
+        });
+    }
+}
+```
+
+Note: ```$table->timestamps();``` will create columns with names "createdAt" and
+"UpdatedAt".
+
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md) and [Code of Conduct](CONDUCT.md),
 if you want to make contribution (pull request)
