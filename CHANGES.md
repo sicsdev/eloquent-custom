@@ -1,5 +1,10 @@
 # Changes History
 
+1.2.0
+-----
+Add new class CamelCaseModel extends Model.
+This class make easy work with DB tables named by camel case notation.
+
 1.1.4
 -----
 Fix User::getFullName() - trim whitespaces

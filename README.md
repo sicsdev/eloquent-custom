@@ -83,6 +83,39 @@ class SomeModel extends Model {
 }
 ``` 
 
+### CamelCaseModel
+
+Extended class Model for use camel case notation in DB.
+
+**Example**:
+
+```php
+use Saritasa\Database\Eloquent\Models\CamelCaseModel;
+
+class SomeModel extends CamelCaseModel
+{
+    //your code
+}
+```
+
+### CamelCaseForeignKeys trait
+
+Use in any model class for get the default foreign key name for this model.
+By default, Eloquent gets foreign keys in snake case notation,
+this trait swap notation to camel case like `carModelId` instead of `car_model_id`.
+Use it if you already have foreign keys in camel case notation.
+
+**Example**:
+
+```php
+use Saritasa\Database\Eloquent\Models\CamelCaseForeignKeys;
+
+class MyModel extends SomeModelClass
+{
+    use CamelCaseForeignKeys;
+}
+```
+
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md) and [Code of Conduct](CONDUCT.md),
 if you want to make contribution (pull request)
