@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class CamelCaseModel
  * Make easy work with DB tables named by camel case notation.
- *
- * @package Saritasa\Database\Eloquent\Models
  */
 class CamelCaseModel extends Model
 {

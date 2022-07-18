@@ -98,9 +98,6 @@ class SomeModel extends CamelCaseModel
 }
 ```
 
-Note: ```$table->timestamps();``` will create columns with names "createdAt" and
-"UpdatedAt".
-
 ### CamelCaseForeignKeys trait
 
 Use in any model class for get the default foreign key name for this model.

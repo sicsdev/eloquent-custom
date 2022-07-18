@@ -4,7 +4,6 @@
 -----
 Add new class CamelCaseModel extends Model.
 This class make easy work with DB tables named by camel case notation.
-Also standard class Blueprint now extends by CamelCaseBlueprint.
 
 1.1.4
 -----
