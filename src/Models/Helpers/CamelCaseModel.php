@@ -8,8 +8,8 @@ class CamelCaseModel extends Model
 {
     use CamelCaseForeignKeys;
 
-    public const CREATED_AT = 'createdAt';
-    public const UPDATED_AT = 'updatedAt';
+    const CREATED_AT = 'createdAt';
+    const UPDATED_AT = 'updatedAt';
 
     /**
      * Indicates whether attributes are snake cased on arrays.
