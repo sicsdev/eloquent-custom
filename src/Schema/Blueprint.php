@@ -1,6 +1,6 @@
 <?php
 
-namespace Saritasa\Database\Schema;
+namespace Saritasa\Database\Eloquent\Schema;
 
 use Closure;
 use Illuminate\Database\Schema\Blueprint;
