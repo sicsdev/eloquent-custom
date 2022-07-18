@@ -1,6 +1,6 @@
 <?php
 
-namespace Saritasa\Database\Eloquent\Models\Helpers;
+namespace Saritasa\Database\Eloquent\Models;
 
 use Illuminate\Support\Str;
 

@@ -90,7 +90,7 @@ Extended class Model for use camel case notation in DB.
 **Example**:
 
 ```php
-use Saritasa\Database\Eloquent\CamelCaseModel;
+use Saritasa\Database\Eloquent\Models\CamelCaseModel;
 
 class SomeModel extends CamelCaseModel
 {
@@ -123,6 +123,21 @@ class CreateSomeTable extends Migration
 
 Note: ```$table->timestamps();``` will create columns with names "createdAt" and
 "UpdatedAt".
+
+### CamelCaseForeignKeys trait
+
+Use in any model class for get the default foreign key name for this model.
+
+**Example**:
+
+```php
+use Saritasa\Database\Eloquent\Models\CamelCaseForeignKeys;
+
+class MyModel extends SomeModelClass
+{
+    use CamelCaseForeignKeys;
+}
+```
 
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md) and [Code of Conduct](CONDUCT.md),
