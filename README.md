@@ -127,6 +127,9 @@ Note: ```$table->timestamps();``` will create columns with names "createdAt" and
 ### CamelCaseForeignKeys trait
 
 Use in any model class for get the default foreign key name for this model.
+By default, Eloquent gets foreign keys in snake case notation,
+this trait swap notation to camel case like `carModelId` instead of `car_model_id`.
+Use it if you already have foreign keys in camel case notation.
 
 **Example**:
 
